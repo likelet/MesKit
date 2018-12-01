@@ -1,5 +1,5 @@
 # nf-core/multiexseq
-**analysis pipelie for multi wes analysis **
+**Analysis pipelie for multi WEX analysis **
 
 [![Build Status](https://travis-ci.org/nf-core/multiexseq.svg?branch=master)](https://travis-ci.org/nf-core/multiexseq)
 [![Nextflow](https://img.shields.io/badge/nextflow-%E2%89%A50.32.0-brightgreen.svg)](https://www.nextflow.io/)
