@@ -1,4 +1,4 @@
-# nf-core/multiexseq: Contributing Guidelines
+# multiexseq: Contributing Guidelines
 
 Hi there! Many thanks for taking an interest in improving multiexseq.
 
