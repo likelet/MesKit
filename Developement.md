@@ -8,6 +8,8 @@
 | Qi Zhao   	| zhaoqi@sysucc.org.cn  	| https://github.com/likelet 	| SYSUCC    	|
 | Chengwei Wang | wangchw8@mail2.sysu.edu.cn| https://github.com/Ninomoriaty| SYSU          |
 |  Ziwei Wang   |  wangzw.edu@gmail.com    |   https://github.com/ZIWEI-WONG |   SYSU |
+| Chen Jianyu  	| 364500513@qq.com  	| https://github.com/chenjy327 	| SYSU    	|
+
 
 
 # to be filled in 
