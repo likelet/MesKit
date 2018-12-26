@@ -11,5 +11,5 @@
 | Chen Jianyu  	| 364500513@qq.com  	| https://github.com/chenjy327 	| SYSU    	|
 | Zheng Li   	| 419125762@qq.com  	| https://github.com/lizheng141026 	| SYSU    	|
 | Xin Wang      | wangx555@mail2.sysu.edu.cn| https://github.com/Wangxin555 | SYSU          |
-
-# to be filled in 
+| Liu Jie  | 1953640796@qq.com |  https://github.com/LiuJie1117/  | SYSU
+# to be filled in
