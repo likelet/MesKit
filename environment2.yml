@@ -1,0 +1,13 @@
+name: nf-core-multiexseq-1.0dev
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+  - aroth85
+dependencies:
+  # TODO nf-core: Add required software dependencies here
+  - fastqc=0.11.8
+  - multiqc=1.6
+  - samtools
+  - pyclone
+  - control-freec
