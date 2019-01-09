@@ -1,0 +1,28 @@
+## images base Ubuntu 16.04
+FROM biocontainers/biocontainers:latest
+
+## metadata
+LABEL base.image="biocontainers:latest"
+LABEL version="2"
+LABEL about.tags="test1"
+
+## Enviroment variables
+
+## runtimes 3
+#ENV PATH /opt/conda/envs/multiexseq_origin/bin:$PATH
+#RUN conda create -c aroth85 --name multiexseq_origin samtools pyclone
+
+RUN conda config --add channels bioconda &&\
+    conda config --add channels aroth85
+
+ENV PATH /opt/conda/envs/multiexseq_facets/bin:$PATH
+RUN conda create --name multiexseq_facets samtools pyclone r-facets 
+
+ENV PATH /opt/conda/envs/multiexseq_freec/bin:$PATH
+RUN conda create --name multiexseq_freec samtools pyclone control-freec
+
+# annovar* (it seems that annovar could always be used as .pl documents so I just copy it..) 
+# RUN conda install perl
+# ADD annovar.latest.tar.gz .
+
+CMD ["/bin/bash"]
