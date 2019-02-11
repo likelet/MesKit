@@ -4,6 +4,9 @@ LABEL authors="Qi Zhao" \
 
 COPY environment1.yml environment2.yml ./
 
+ADD http://www.openbioinfomatics.org/annovar/download/0wgxR2rIVP/annovar.latest.tar.gz ./annovar.latest.tar.gz
+RUN tar -xzvf annovar.latest.tar.gz && rm annovar.latest.tar.gz
+
 ENV PATH /opt/conda/envs/multiexseq_facets/bin:$PATH
 RUN conda env create -f /environment1.yml -n multiexseq_facets && conda clean -a
 
