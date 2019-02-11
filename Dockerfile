@@ -4,7 +4,7 @@ LABEL authors="Qi Zhao" \
 
 COPY environment1.yml environment2.yml ./
 
-RUN wget http://www.openbioinformatics.org/annovar/download/0wgxR2rIVP/annovar.version.tar.gz
+RUN wget http://www.openbioinformatics.org/annovar/download/0wgxR2rIVP/annovar.latest.tar.gz
 RUN tar -xzvf annovar.latest.tar.gz && rm annovar.latest.tar.gz
 
 ENV PATH /opt/conda/envs/multiexseq_facets/bin:$PATH
