@@ -4,8 +4,7 @@ LABEL authors="Qi Zhao" \
 
 COPY environment1.yml environment2.yml ./
 
-RUN wget http://www.openbioinformatics.org/annovar/download/0wgxR2rIVP/annovar.latest.tar.gz
-RUN tar -xzvf annovar.latest.tar.gz && rm annovar.latest.tar.gz
+RUN wget http://www.openbioinformatics.org/annovar/download/0wgxR2rIVP/annovar.latest.tar.gz && tar -xzvf annovar.latest.tar.gz && rm annovar.latest.tar.gz
 
 ENV PATH /opt/conda/envs/multiexseq_facets/bin:$PATH
 RUN conda env create -f /environment1.yml -n multiexseq_facets && conda clean -a
@@ -13,6 +12,8 @@ RUN conda env create -f /environment1.yml -n multiexseq_facets && conda clean -a
 ENV PATH /opt/conda/envs/multiexseq_freec/bin:$PATH
 RUN conda env create -f /environment2.yml -n multiexseq_freec && conda clean -a
 
-ENV PATH /opt/conda/envs/nf-core-multiexseq-1.0dev/bin:$PATH
+RUN cd annovar && source activate multiexseq_freec && annotate_variation.pl -downdb -buildver hg19 -webfrom annovar refGene humandb/
+
+# ENV PATH /opt/conda/envs/nf-core-multiexseq-1.0dev/bin:$PATH
 
 CMD ["/bin/bash"]
