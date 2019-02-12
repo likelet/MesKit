@@ -13,8 +13,8 @@ ENV PATH /opt/conda/envs/multiexseq_freec/bin:$PATH
 RUN conda env create -f /environment2.yml -n multiexseq_freec && conda clean -a
 
 RUN cd annovar \
-    && echo "conda activate" >> ~/.bashrc \
     && echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc \
+    && echo "conda activate" >> ~/.bashrc \
     && conda activate multiexseq_freec \
     && annotate_variation.pl -downdb -buildver hg19 -webfrom annovar refGene humandb/
 
