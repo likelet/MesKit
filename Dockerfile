@@ -16,7 +16,7 @@ RUN cd annovar \
     #&& echo "./opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc \
     #&& echo "conda activate" >> ~/.bashrc \
     #&& conda activate multiexseq_freec \
-    && annotate_variation.pl -downdb -buildver hg19 -webfrom annovar refGene humandb/
+    && perl annotate_variation.pl -downdb -buildver hg19 -webfrom annovar refGene humandb/
 
 # ENV PATH /opt/conda/envs/nf-core-multiexseq-1.0dev/bin:$PATH
 
