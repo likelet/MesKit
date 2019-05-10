@@ -493,7 +493,7 @@ upset_analysis<-function(dataframe=NULL,patientID=NULL,text_show=FALSE){
     
     }
     
-    key_point<-key_point+
+    key_point <- key_point+
     
       theme(axis.ticks.x  = element_blank(),
     
@@ -513,7 +513,9 @@ upset_analysis<-function(dataframe=NULL,patientID=NULL,text_show=FALSE){
     
             plot.margin = unit(c(0.08,0.2,0,0.1),"inches"),
     
-            legend.spacing  = unit(c(0.08,0,0,0),"inches"))+
+            legend.spacing  = unit(c(0.09,0,0,0),"inches"),
+            
+            legend.key.width  = unit(0.2,"inches"))+
     
       scale_fill_npg()+
     
@@ -553,6 +555,8 @@ upset_analysis<-function(dataframe=NULL,patientID=NULL,text_show=FALSE){
             
             axis.text.x =element_blank(),
             
+            axis.title.y = element_text(size=14),
+            
             axis.ticks.x = element_blank(),
             
             axis.ticks.y = element_blank(),
@@ -561,7 +565,7 @@ upset_analysis<-function(dataframe=NULL,patientID=NULL,text_show=FALSE){
             
             axis.line.y = element_blank(),
             
-            plot.margin = unit(c(0.15,0,0,0.77),"inches"))+
+            plot.margin = unit(c(0.15,0,0,0.76),"inches"))+
       
       scale_y_discrete(position = "right")
     
@@ -573,7 +577,7 @@ upset_analysis<-function(dataframe=NULL,patientID=NULL,text_show=FALSE){
       
       pdf(paste("upset_analysis.",patientID,".pdf",sep = ""),width = 10,height = 10)
       
-      gg<-ggdraw()+draw_plot(key_point,0,0.3,1,0.7)+draw_plot(point_line_plot,0,0,0.91,0.35)
+      gg<-ggdraw()+draw_plot(key_point,0,0.3,1,0.7)+draw_plot(point_line_plot,0,0,0.9,0.35)
       
     } else {
       
@@ -587,7 +591,7 @@ upset_analysis<-function(dataframe=NULL,patientID=NULL,text_show=FALSE){
         
           pdf(paste("upset_analysis.",patientID,".pdf",sep = ""),width = 10,height = 10)
         
-          gg<-ggdraw()+draw_plot(key_point,0,0.3,1,0.7)+draw_plot(point_line_plot,0,0,0.905,0.35)
+          gg<-ggdraw()+draw_plot(key_point,0,0.3,1,0.7)+draw_plot(point_line_plot,0,0,0.9,0.35)
       
         }
     
